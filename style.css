@@ -440,136 +440,6 @@ section {
 }
 
 /* =========================================================
-   THE PRACTICE
-   ========================================================= */
-
-.practice-section {
-    background: rgba(184, 146, 74, 0.03);
-    padding: 100px 32px;
-}
-
-.practice-list {
-    max-width: 640px;
-    margin: 0 auto 40px;
-}
-
-.practice-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--ink-line);
-}
-
-.practice-row:last-of-type { border-bottom: none; }
-
-.practice-row__q {
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-    color: var(--stone);
-    flex: 1;
-}
-
-.practice-row__a {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 18px;
-    color: var(--gold);
-    text-shadow:
-        0 0 10px rgba(184, 146, 74, 0.3),
-        0 0 30px rgba(184, 146, 74, 0.15),
-        0 0 60px rgba(184, 146, 74, 0.08);
-    flex-shrink: 0;
-    white-space: nowrap;
-}
-
-.practice-coda {
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.practice-coda p {
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    color: var(--ink);
-    line-height: 1.8;
-    margin-top: 40px;
-}
-
-.practice-coda .final {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 28px;
-    color: var(--gold);
-    text-shadow:
-        0 0 10px rgba(184, 146, 74, 0.3),
-        0 0 30px rgba(184, 146, 74, 0.15),
-        0 0 60px rgba(184, 146, 74, 0.08);
-    margin-top: 24px;
-    display: block;
-}
-
-/* =========================================================
-   THE WAY — buy steps
-   ========================================================= */
-
-.way-section {
-    background: var(--tatami);
-    padding: 100px 32px;
-}
-
-.way-steps {
-    max-width: 640px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.way-step {
-    display: flex;
-    align-items: center;
-    gap: 28px;
-    padding: 24px 0;
-    width: 100%;
-    max-width: 540px;
-}
-
-.way-step__num {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: 44px;
-    color: var(--gold);
-    opacity: 0.22;
-    flex-shrink: 0;
-    width: 60px;
-    text-align: center;
-    line-height: 1;
-}
-
-.way-step__text {
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    font-size: 17px;
-    color: var(--ink);
-    line-height: 1.6;
-}
-
-.way-divider {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: var(--sage);
-    opacity: 0.6;
-}
-
-/* =========================================================
    FOOTER
    ========================================================= */
 
@@ -701,26 +571,18 @@ section {
     .nav__icon svg { width: 16px; height: 16px; }
     .nav__buy { font-size: 11px; padding: 5px 14px; letter-spacing: 1.5px; }
 
-    .section, .section--tight, .ct-section, .practice-section, .way-section, .footer {
+    .section, .section--tight, .ct-section, .footer {
         padding-left: 20px;
         padding-right: 20px;
     }
     .section { padding-top: 80px; padding-bottom: 80px; }
-    .ct-section, .practice-section, .way-section { padding-top: 70px; padding-bottom: 70px; }
+    .ct-section { padding-top: 70px; padding-bottom: 70px; }
 
     .word-block p { font-size: 16px; }
     .word-block p:first-of-type { font-size: 17px; }
     .word-block .single-word { font-size: 32px; }
 
     .tweet-grid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 16px; }
-
-    .practice-row { flex-direction: column; align-items: flex-start; gap: 6px; }
-    .practice-row__a { white-space: normal; }
-    .practice-coda .final { font-size: 24px; }
-
-    .way-step { gap: 18px; }
-    .way-step__num { font-size: 36px; width: 48px; }
-    .way-step__text { font-size: 15px; }
 
     .toast { font-size: 16px; padding: 12px 26px; }
 }
