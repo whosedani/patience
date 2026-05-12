@@ -416,6 +416,12 @@ section {
     flex: 1;
 }
 
+.tweet-card__body .patience-glow {
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
 .tweet-card__stats {
     display: flex;
     align-items: center;
@@ -467,16 +473,6 @@ section {
 @keyframes gentle-pulse {
     0%, 100% { opacity: 0.7; }
     50% { opacity: 1; }
-}
-
-.footer__chain {
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    font-size: 12px;
-    color: var(--stone);
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-top: 24px;
 }
 
 .footer__ca {
