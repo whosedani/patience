@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patience. — admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --tatami: #F7F3ED;
+            --silk: #EDE8DF;
+            --gold: #B8924A;
+            --ink: #2C2820;
+            --stone: #9C9488;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            background: var(--tatami);
+            color: var(--ink);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .card {
+            width: 100%;
+            max-width: 460px;
+            background: var(--silk);
+            border: 1px solid rgba(44, 40, 32, 0.06);
+            border-radius: 16px;
+            padding: 44px 36px;
+            box-shadow: 0 8px 32px rgba(184, 146, 74, 0.06);
+        }
+        .card__title {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 28px;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+            text-shadow:
+                0 0 10px rgba(184, 146, 74, 0.25),
+                0 0 30px rgba(184, 146, 74, 0.1);
+        }
+        .card__sub {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--stone);
+            margin-bottom: 32px;
+            letter-spacing: 0.3px;
+        }
+        label {
+            display: block;
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 10px;
+            color: var(--stone);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            font-family: 'Jost', sans-serif;
+            font-weight: 300;
+            font-size: 13px;
+            padding: 11px 14px;
+            background: var(--tatami);
+            border: 1px solid rgba(44, 40, 32, 0.08);
+            border-radius: 8px;
+            color: var(--ink);
+            margin-bottom: 22px;
+            outline: none;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        input:focus {
+            border-color: rgba(184, 146, 74, 0.5);
+            background: #FFFFFF;
+        }
+        button {
+            width: 100%;
+            font-family: 'Jost', sans-serif;
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 2px;
+            padding: 13px;
+            background: transparent;
+            border: 1px solid var(--gold);
+            border-radius: 999px;
+            color: var(--gold);
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+            text-transform: lowercase;
+        }
+        button:hover {
+            background: rgba(184, 146, 74, 0.08);
+        }
+        .msg {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: var(--stone);
+            margin-top: 18px;
+            text-align: center;
+            min-height: 20px;
+        }
+        .msg.error { color: #B85C5C; }
+        .msg.success {
+            color: var(--gold);
+            text-shadow:
+                0 0 10px rgba(184, 146, 74, 0.25),
+                0 0 30px rgba(184, 146, 74, 0.1);
+        }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="login-card">
+        <div class="card__title">patience.</div>
+        <p class="card__sub">admin access — those who wait are known</p>
+        <label>PASSWORD</label>
+        <input type="password" id="password" placeholder="enter the garden">
+        <button id="login-btn">enter the garden</button>
+        <p class="msg" id="login-msg"></p>
+    </div>
+
+    <div class="card hidden" id="config-card">
+        <div class="card__title">patience.</div>
+        <p class="card__sub">configure the garden</p>
+        <label>CONTRACT ADDRESS</label>
+        <input type="text" id="cfg-ca" placeholder="contract address">
+        <label>X URL</label>
+        <input type="text" id="cfg-x" placeholder="https://x.com/...">
+        <label>COMMUNITY URL</label>
+        <input type="text" id="cfg-community" placeholder="https://t.me/... or https://x.com/i/communities/...">
+        <label>BUY URL</label>
+        <input type="text" id="cfg-buy" placeholder="https://pump.fun/...">
+        <button id="save-btn">save configuration</button>
+        <p class="msg" id="save-msg"></p>
+    </div>
+
+    <script>
+        let authHash = '';
+
+        async function sha256(text) {
+            const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+            return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+
+        document.getElementById('login-btn').addEventListener('click', async () => {
+            const pw = document.getElementById('password').value.trim();
+            if (!pw) return;
+            authHash = await sha256(pw);
+            try {
+                const r = await fetch('/api/config', { headers: { 'Authorization': 'Bearer ' + authHash } });
+                if (!r.ok) throw new Error('wrong password');
+                const cfg = await r.json();
+                document.getElementById('cfg-ca').value = cfg.ca || '';
+                document.getElementById('cfg-x').value = cfg.x || '';
+                document.getElementById('cfg-community').value = cfg.community || '';
+                document.getElementById('cfg-buy').value = cfg.buy || '';
+                document.getElementById('login-card').classList.add('hidden');
+                document.getElementById('config-card').classList.remove('hidden');
+            } catch {
+                const msg = document.getElementById('login-msg');
+                msg.textContent = 'the garden does not open. try again.';
+                msg.className = 'msg error';
+            }
+        });
+
+        document.getElementById('password').addEventListener('keydown', e => {
+            if (e.key === 'Enter') document.getElementById('login-btn').click();
+        });
+
+        document.getElementById('save-btn').addEventListener('click', async () => {
+            const body = {
+                ca: document.getElementById('cfg-ca').value.trim(),
+                x: document.getElementById('cfg-x').value.trim(),
+                community: document.getElementById('cfg-community').value.trim(),
+                buy: document.getElementById('cfg-buy').value.trim()
+            };
+            const msg = document.getElementById('save-msg');
+            try {
+                const r = await fetch('/api/config', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + authHash },
+                    body: JSON.stringify(body)
+                });
+                if (!r.ok) throw new Error('save failed');
+                msg.textContent = 'saved. patience.';
+                msg.className = 'msg success';
+            } catch {
+                msg.textContent = 'failed. patience anyway.';
+                msg.className = 'msg error';
+            }
+        });
+    </script>
+</body>
+</html>

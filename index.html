@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>patience.</title>
+    <meta name="description" content="The only word that matters. patience.">
+    <meta property="og:title" content="patience.">
+    <meta property="og:description" content="The only word that matters. patience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Paper texture overlay -->
+    <svg class="paper-texture" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <filter id="paper">
+            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+            <feColorMatrix values="0 0 0 0 0.17 0 0 0 0 0.16 0 0 0 0 0.13 0 0 0 0.5 0"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#paper)"/>
+    </svg>
+
+    <!-- ============================ NAV ============================ -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="#" class="nav__brand">patience</a>
+
+            <span class="nav__ca" id="ca-nav" data-copy-ca title="click to copy">CA — coming soon</span>
+
+            <div class="nav__right">
+                <a href="#" id="nav-x" class="nav__icon" aria-label="X / Twitter" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="#" id="nav-community" class="nav__icon" aria-label="community" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </a>
+                <a href="#" id="nav-buy" class="nav__buy" target="_blank" rel="noopener">buy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero">
+        <img class="hero__bg" src="static/hero.png" alt="" aria-hidden="true" onerror="this.style.display='none'">
+        <div class="hero__title">
+            <h1>PATIENCE.</h1>
+        </div>
+        <div class="hero__scroll" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============================ THE WORD ============================ -->
+    <section class="section">
+        <div class="container word-block">
+            <p class="kicker" data-reveal>The only word that matters</p>
+            <p data-reveal>
+                Trending tab on CT. Experienced traders sharing their key to success in the trenches. Hundreds of threads, thousands of takes. And they all converge on one word.
+            </p>
+            <p class="single-word" data-reveal>patience.</p>
+            <p data-reveal>
+                Not alpha. Not timing. Not insider info. The traders who made it — who actually made it through cycles, through bear markets, through scams and rugs and everything in between — they all say the same thing.
+            </p>
+            <p data-reveal>
+                Without <span class="patience-glow">patience</span> we are nothing.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================ CT HAS SPOKEN ============================ -->
+    <section class="ct-section">
+        <p class="kicker" data-reveal>CT has spoken</p>
+        <h2 class="section__heading" data-reveal>
+            They All Said <span class="patience-glow">Patience.</span>
+        </h2>
+
+        <div class="tweet-grid">
+            <!-- LEFT COLUMN -->
+            <div class="tweet-col">
+                <!-- 1. TradingComposur -->
+                <a class="tweet-card" data-reveal-stagger style="--stagger-index:0"
+                   href="https://x.com/TradingComposur" target="_blank" rel="noopener">
+                    <div class="tweet-card__header">
+                        <div class="tweet-card__avatar">
+                            <img src="static/avatars/tradingcomposur.jpg" alt="" onerror="this.style.opacity='0'">
+                        </div>
+                        <div class="tweet-card__id">
+                            <div class="tweet-card__name-row">
+                                <span class="tweet-card__name">Trading Composure</span>
+                                <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-hidden="true">
+                                    <path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/>
+                                </svg>
+                            </div>
+                            <div class="tweet-card__handle">@TradingComposur</div>
+                        </div>
+                    </div>
+                    <div class="tweet-card__body">
+                        Be <span class="patience-glow">patient</span> with your process. Be <span class="patience-glow">patient</span> with the market. And perhaps above all, be <span class="patience-glow">patient</span> with yourself. This game is all <span class="patience-glow">patience.</span>
+                    </div>
+                    <div class="tweet-card__stats">
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            105
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                            41
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            8.1K
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 2. alpharivelino -->
+                <a class="tweet-card" data-reveal-stagger style="--stagger-index:1"
+                   href="https://x.com/alpharivelino" target="_blank" rel="noopener">
+                    <div class="tweet-card__header">
+                        <div class="tweet-card__avatar">
+                            <img src="static/avatars/alpharivelino.jpg" alt="" onerror="this.style.opacity='0'">
+                        </div>
+                        <div class="tweet-card__id">
+                            <div class="tweet-card__name-row">
+                                <span class="tweet-card__name">Alpha Rivelino</span>
+                                <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-hidden="true"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                            </div>
+                            <div class="tweet-card__handle">@alpharivelino</div>
+                        </div>
+                    </div>
+                    <div class="tweet-card__body">
+                        Money buys sleep. Sleep buys <span class="patience-glow">patience.</span> <span class="patience-glow">Patience</span> buys love.
+                    </div>
+                    <div class="tweet-card__stats">
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            1K
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                            69
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            14.3K
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 3. cryptocupra -->
+                <a class="tweet-card" data-reveal-stagger style="--stagger-index:2"
+                   href="https://x.com/cryptocupra" target="_blank" rel="noopener">
+                    <div class="tweet-card__header">
+                        <div class="tweet-card__avatar">
+                            <img src="static/avatars/cryptocupra.jpg" alt="" onerror="this.style.opacity='0'">
+                        </div>
+                        <div class="tweet-card__id">
+                            <div class="tweet-card__name-row">
+                                <span class="tweet-card__name">CryptoCupra</span>
+                                <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-hidden="true"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                            </div>
+                            <div class="tweet-card__handle">@cryptocupra</div>
+                        </div>
+                    </div>
+                    <div class="tweet-card__body">
+                        Bitcoin is going to $200,000. ETH will break $10,000. SOL will reach $1,000. Altcoins will pump 50-100x. <span class="patience-glow">Patience</span>
+                    </div>
+                    <div class="tweet-card__stats">
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            62
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                            9
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            1.8K
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 4. Pumpfun -->
+                <a class="tweet-card" data-reveal-stagger style="--stagger-index:3"
+                   href="https://x.com/pumpdotfun" target="_blank" rel="noopener">
+                    <div class="tweet-card__header">
+                        <div class="tweet-card__avatar">
+                            <img src="static/avatars/pumpfun.jpg" alt="" onerror="this.style.opacity='0'">
+                        </div>
+                        <div class="tweet-card__id">
+                            <div class="tweet-card__name-row">
+                                <span class="tweet-card__name">pump.fun</span>
+                                <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-hidden="true"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                            </div>
+                            <div class="tweet-card__handle">@pumpdotfun</div>
+                        </div>
+                    </div>
+                    <div class="tweet-card__body">
+                        <span class="patience-glow">"patience</span> is a virtue"
+                    </div>
+                    <div class="tweet-card__stats">
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            13
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            6.3K
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- RIGHT COLUMN (offset) -->
+            <div class="tweet-col">
+                <!-- 5. DipWheeler -->
+                <a class="tweet-card" data-reveal-stagger style="--stagger-index:0"
+                   href="https://x.com/DipWheeler" target="_blank" rel="noopener">
+                    <div class="tweet-card__header">
+                        <div class="tweet-card__avatar">
+                            <img src="static/avatars/dipwheeler.jpg" alt="" onerror="this.style.opacity='0'">
+                        </div>
+                        <div class="tweet-card__id">
+                            <div class="tweet-card__name-row">
+                                <span class="tweet-card__name">DipWheeler</span>
+                                <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-hidden="true"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                            </div>
+                            <div class="tweet-card__handle">@DipWheeler</div>
+                        </div>
+                    </div>
+                    <div class="tweet-card__body">
+                        all you need is <span class="patience-glow">patience</span> &amp; a fat nutsack to make millions.
+                    </div>
+                    <div class="tweet-card__stats">
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            298
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                            41
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            8.1K
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 6. cryptorover -->
+                <a class="tweet-card" data-reveal-stagger style="--stagger-index:1"
+                   href="https://x.com/rovercrc" target="_blank" rel="noopener">
+                    <div class="tweet-card__header">
+                        <div class="tweet-card__avatar">
+                            <img src="static/avatars/cryptorover.jpg" alt="" onerror="this.style.opacity='0'">
+                        </div>
+                        <div class="tweet-card__id">
+                            <div class="tweet-card__name-row">
+                                <span class="tweet-card__name">Crypto Rover</span>
+                                <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-hidden="true"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                            </div>
+                            <div class="tweet-card__handle">@rovercrc</div>
+                        </div>
+                    </div>
+                    <div class="tweet-card__body">
+                        gradually, then suddenly... <span class="patience-glow">patience</span> is key with $BTC.
+                    </div>
+                    <div class="tweet-card__stats">
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            306
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                            12
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            52.9K
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 7. voided -->
+                <a class="tweet-card" data-reveal-stagger style="--stagger-index:2"
+                   href="https://x.com/voided" target="_blank" rel="noopener">
+                    <div class="tweet-card__header">
+                        <div class="tweet-card__avatar">
+                            <img src="static/avatars/voided.jpg" alt="" onerror="this.style.opacity='0'">
+                        </div>
+                        <div class="tweet-card__id">
+                            <div class="tweet-card__name-row">
+                                <span class="tweet-card__name">voided</span>
+                                <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-hidden="true"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                            </div>
+                            <div class="tweet-card__handle">@voided</div>
+                        </div>
+                    </div>
+                    <div class="tweet-card__body">
+                        You want profits now. Profits want <span class="patience-glow">Patience,</span> <span class="patience-glow">Patience</span> wants Discipline, Discipline wants Risk management. There are no shortcuts.
+                    </div>
+                    <div class="tweet-card__stats">
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            381
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                            60
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            5.9K
+                        </span>
+                    </div>
+                </a>
+
+                <!-- 8. a1lon9 -->
+                <a class="tweet-card" data-reveal-stagger style="--stagger-index:3"
+                   href="https://x.com/a1lon9" target="_blank" rel="noopener">
+                    <div class="tweet-card__header">
+                        <div class="tweet-card__avatar">
+                            <img src="static/avatars/alon.jpg" alt="" onerror="this.style.opacity='0'">
+                        </div>
+                        <div class="tweet-card__id">
+                            <div class="tweet-card__name-row">
+                                <span class="tweet-card__name">alon</span>
+                                <svg class="tweet-card__verified" viewBox="0 0 22 22" aria-hidden="true"><path fill="#1d9bf0" d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z"/></svg>
+                            </div>
+                            <div class="tweet-card__handle">@a1lon9</div>
+                        </div>
+                    </div>
+                    <div class="tweet-card__body" style="font-size: 22px; font-family: 'Cormorant Garamond', serif; font-style: italic; padding: 8px 0;">
+                        <span class="patience-glow">"patience"</span>
+                    </div>
+                    <div class="tweet-card__stats">
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            504
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+                            57
+                        </span>
+                        <span class="tweet-card__stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            66.2K
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ THE PRACTICE ============================ -->
+    <section class="practice-section">
+        <p class="kicker" data-reveal>The practice</p>
+        <h2 class="section__heading" data-reveal>
+            What <span class="patience-glow">Patience</span> Looks Like in the Trenches
+        </h2>
+
+        <div class="practice-list">
+            <div class="practice-row" data-reveal-stagger style="--stagger-index:0">
+                <span class="practice-row__q">New cycle?</span>
+                <span class="practice-row__a">— patience.</span>
+            </div>
+            <div class="practice-row" data-reveal-stagger style="--stagger-index:1">
+                <span class="practice-row__q">Holdings down 90%?</span>
+                <span class="practice-row__a">— patience.</span>
+            </div>
+            <div class="practice-row" data-reveal-stagger style="--stagger-index:2">
+                <span class="practice-row__q">Economy collapsing?</span>
+                <span class="practice-row__a">— patience.</span>
+            </div>
+            <div class="practice-row" data-reveal-stagger style="--stagger-index:3">
+                <span class="practice-row__q">Market manipulation?</span>
+                <span class="practice-row__a">— patience.</span>
+            </div>
+            <div class="practice-row" data-reveal-stagger style="--stagger-index:4">
+                <span class="practice-row__q">Bear market, scams, crashes?</span>
+                <span class="practice-row__a">— patience.</span>
+            </div>
+            <div class="practice-row" data-reveal-stagger style="--stagger-index:5">
+                <span class="practice-row__q">Everyone telling you it's over?</span>
+                <span class="practice-row__a">— patience.</span>
+            </div>
+        </div>
+
+        <div class="practice-coda">
+            <p data-reveal>
+                Make mistakes. Adapt. Wait for the right moment to hit that buy button. The only thing that separates those who make it from those who don't isn't knowledge. It isn't connections. It isn't even capital.
+            </p>
+            <span class="final" data-reveal>It's patience.</span>
+        </div>
+    </section>
+
+    <!-- ============================ THE WAY ============================ -->
+    <section class="way-section">
+        <p class="kicker" data-reveal>The way</p>
+        <div class="way-steps">
+            <div class="way-step" data-reveal-stagger style="--stagger-index:0">
+                <span class="way-step__num">一</span>
+                <span class="way-step__text">Get Phantom. The patient have wallets, not excuses.</span>
+            </div>
+            <span class="way-divider" aria-hidden="true"></span>
+            <div class="way-step" data-reveal-stagger style="--stagger-index:1">
+                <span class="way-step__num">二</span>
+                <span class="way-step__text">Buy SOL. Fuel for those who wait.</span>
+            </div>
+            <span class="way-divider" aria-hidden="true"></span>
+            <div class="way-step" data-reveal-stagger style="--stagger-index:2">
+                <span class="way-step__num">三</span>
+                <span class="way-step__text">Swap for $patience on pump.fun.</span>
+            </div>
+            <span class="way-divider" aria-hidden="true"></span>
+            <div class="way-step" data-reveal-stagger style="--stagger-index:3">
+                <span class="way-step__num">四</span>
+                <span class="way-step__text">Hold. The patient inherit the market.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================ FOOTER ============================ -->
+    <footer class="footer">
+        <div class="footer__word">patience.</div>
+        <div class="footer__chain">on-chain</div>
+        <div class="footer__ca" id="ca-footer" data-copy-ca title="click to copy">CA — coming soon</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
